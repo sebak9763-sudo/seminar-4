@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <h2> 
+    Array: Print the array each time</h2>
+    <div id="output"></div>
+    
+  <script>
+    var styles = ["jazz", "blues"];
+    function updateOutput(){
+    document.querySelector("#output").innerHTML += styles.join(",") + "<br>";
+    }
+
+    updateOutput();
+    styles.push("Rock-n-Roll");
+    updateOutput();
+
+    var middleindex = Math.floor(styles.length / 2);
+    styles[middleindex] = 'classics';
+
+    styles.shift();
+    updateOutput(); 
+
+    styles.unshift("Rap", "Reggae");
+    updateOutput();
+
+
+  </script>
+</body>
+</html>
